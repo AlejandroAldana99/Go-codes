@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "bf4ea037-78e8-40de-9df5-e5232571abb5",
+		"name": "YoFio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14151799"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 06:29:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"pass\",\n    \"description\": \"API Pod HealthCheck\",\n    \"version\": \"1.0\",\n    \"details\": [\n        {\n            \"componentName\": \"instance\",\n            \"componentType\": \"pod\",\n            \"componentId\": \"\",\n            \"metricValue\": 0,\n            \"metricUnit\": \"ms\",\n            \"time\": \"2022-11-04T00:29:11.1117267-06:00\",\n            \"status\": \"pass\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Health Dependencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/health/dependencies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"health",
+						"dependencies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health Dependencies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/health/dependencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"health",
+								"dependencies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 06:29:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "282"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"pass\",\n    \"description\": \"API health status\",\n    \"version\": \"1.0\",\n    \"details\": [\n        {\n            \"componentName\": \"MongoDB Connection\",\n            \"componentType\": \"datastore\",\n            \"componentId\": \"MONGODB-RSAUTH-CONN\",\n            \"metricValue\": 314.1656,\n            \"metricUnit\": \"ms\",\n            \"time\": \"2022-11-04T00:29:16.215097-06:00\",\n            \"status\": \"pass\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Credit-Assigment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"original_investment\":200.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/credit-assigment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"credit-assigment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credit-Assigment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"original_investment\":2200.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/credit-assigment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"credit-assigment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 06:26:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"CreditResponse\": [\n        {\n            \"credit_type_300\": 0,\n            \"credit_type_500\": 3,\n            \"credit_type_700\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"statistics"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Statistics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/statistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 07:12:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "134"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"TotalAssignations\": 5,\n    \"SuccessfulAssignations\": 4,\n    \"FailedAssignations\": 1,\n    \"AvgSuccessfulAssignations\": 0.8,\n    \"AvgFailedAssignations\": 0.2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Assigment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/credit-assigment/6364b788088fd4f62eb2a8ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"credit-assigment",
+						"6364b788088fd4f62eb2a8ba"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Assigment",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/credit-assigment/6364b788088fd4f62eb2a8ba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"credit-assigment",
+								"6364b788088fd4f62eb2a8ba"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 15:56:00 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6364b788088fd4f62eb2a8ba\",\n    \"original_investment\": 2200,\n    \"combinations\": [\n        {\n            \"credit_type_300\": 0,\n            \"credit_type_500\": 3,\n            \"credit_type_700\": 1\n        }\n    ],\n    \"noncombinated\": false\n}"
+				}
+			]
+		}
+	]
+}
