@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/AlejandroAldana99/mvp_api/constants"
-	"github.com/AlejandroAldana99/mvp_api/models"
-	"github.com/AlejandroAldana99/mvp_api/services"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/constants"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/services"
 	"github.com/labstack/echo/v4"
 )
 

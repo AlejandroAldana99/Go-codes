@@ -3,8 +3,8 @@ package services
 import (
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/constants"
-	"github.com/AlejandroAldana99/mvp_api/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/constants"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 )
 
 func validCoordinates(lat float64, lng float64) bool {

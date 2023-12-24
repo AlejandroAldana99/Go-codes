@@ -3,10 +3,10 @@ package routes
 import (
 	"net/http"
 
-	"github.com/AlejandroAldana99/mvp_api/controllers"
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
-	"github.com/AlejandroAldana99/mvp_api/middleware"
-	"github.com/AlejandroAldana99/mvp_api/server/di"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/controllers"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/middleware"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/server/di"
 	"github.com/labstack/echo/v4"
 )
 

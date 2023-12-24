@@ -4,11 +4,11 @@ import (
 	e "errors"
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/constants"
-	"github.com/AlejandroAldana99/mvp_api/errors"
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
-	"github.com/AlejandroAldana99/mvp_api/models"
-	"github.com/AlejandroAldana99/mvp_api/repositories"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/constants"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/errors"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/repositories"
 )
 
 const millisecondsEq = 1000000.0

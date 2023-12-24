@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 )
 
 type HealthService struct{}

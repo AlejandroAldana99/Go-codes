@@ -1,11 +1,11 @@
 package di
 
 import (
-	"github.com/AlejandroAldana99/mvp_api/config"
-	"github.com/AlejandroAldana99/mvp_api/controllers"
-	"github.com/AlejandroAldana99/mvp_api/database"
-	"github.com/AlejandroAldana99/mvp_api/repositories"
-	"github.com/AlejandroAldana99/mvp_api/services"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/config"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/controllers"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/database"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/repositories"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/services"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.uber.org/dig"
 )

@@ -4,13 +4,13 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/AlejandroAldana99/mvp_api/constants"
-	er "github.com/AlejandroAldana99/mvp_api/errors"
-	"github.com/AlejandroAldana99/mvp_api/libs"
-	"github.com/AlejandroAldana99/mvp_api/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/constants"
+	er "github.com/AlejandroAldana99/Package-Delivery-REST-API/errors"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 	"github.com/go-playground/validator"
 
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
 	"github.com/labstack/echo/v4"
 )
 
@@ -78,7 +78,7 @@ func ParamsLoginValidator(next echo.HandlerFunc) echo.HandlerFunc {
 
 }
 
-//ValidateInput :
+// ValidateInput :
 func ValidateOrderBody(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) (e error) {
 		dto, err := orderBodyToStruct(c)
@@ -113,14 +113,14 @@ func ValidateUserBody(next echo.HandlerFunc) echo.HandlerFunc {
 	}
 }
 
-//SendgridPayloadToStruct :
+// SendgridPayloadToStruct :
 func orderBodyToStruct(c echo.Context) (models.OrderData, error) {
 	dto := new(models.OrderData)
 	err := c.Bind(dto)
 	return *dto, err
 }
 
-//ValidateInputModelSendgrid :
+// ValidateInputModelSendgrid :
 func validateOrderModel(dto models.OrderData) error {
 	validate = validator.New()
 	err := validate.Struct(dto)
@@ -136,7 +136,7 @@ func userBodyToStruct(c echo.Context) (models.UserData, error) {
 	return *dto, err
 }
 
-//ValidateInputModelSendgrid :
+// ValidateInputModelSendgrid :
 func validateUserModel(dto models.UserData) error {
 	validate = validator.New()
 	err := validate.Struct(dto)

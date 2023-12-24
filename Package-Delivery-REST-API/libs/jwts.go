@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/constants"
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/constants"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
 	"github.com/golang-jwt/jwt/v4"
 )
 

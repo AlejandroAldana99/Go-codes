@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/config"
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
-	"github.com/AlejandroAldana99/mvp_api/models"
-	"github.com/AlejandroAldana99/mvp_api/services"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/config"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/services"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 

@@ -1,6 +1,6 @@
 package repositories
 
-import "github.com/AlejandroAldana99/mvp_api/models"
+import "github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 
 type IOrderRepository interface {
 	GetOrder(userID string) (models.OrderData, error)

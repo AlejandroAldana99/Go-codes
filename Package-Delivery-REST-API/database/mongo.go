@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlejandroAldana99/mvp_api/config"
-	"github.com/AlejandroAldana99/mvp_api/libs/logger"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/config"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/libs/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"

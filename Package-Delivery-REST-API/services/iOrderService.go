@@ -1,6 +1,6 @@
 package services
 
-import "github.com/AlejandroAldana99/mvp_api/models"
+import "github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 
 type IOrderService interface {
 	GetOrder(orderID string, userID string, role string) (models.OrderData, error)

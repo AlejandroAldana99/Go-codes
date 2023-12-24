@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/AlejandroAldana99/mvp_api/models"
+	"github.com/AlejandroAldana99/Package-Delivery-REST-API/models"
 	"github.com/labstack/echo/v4"
 )
 

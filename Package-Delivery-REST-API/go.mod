@@ -1,4 +1,4 @@
-module github.com/AlejandroAldana99/mvp_api
+module github.com/AlejandroAldana99/Package-Delivery-REST-API
 
 go 1.18
 
