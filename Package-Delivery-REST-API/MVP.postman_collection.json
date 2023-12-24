@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "a1a91dde-095d-496a-bea3-dee89c5a7b5e",
+		"name": "MVP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16395940"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Leonel Aldana\",\n\t\"email\":\"example2@email.com\",\n\t\"password\":\"abc1234\",\n\t\"role\":\"Cliente\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/mvp/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Alejandro ALdana\",\n\t\"email\":\"example@email.com\",\n\t\"password\":\"abc1234\",\n\t\"role\":\"Admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/mvp/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 00:29:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						}
+					],
+					"cookie": [],
+					"body": "\"Success\""
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/mvp/user/login?user=example2@email.com&password=abc1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "example2@email.com"
+						},
+						{
+							"key": "password",
+							"value": "abc1234"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/mvp/user/login?user=example@email.com&password=abc1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "example@email.com"
+								},
+								{
+									"key": "password",
+									"value": "abc1234"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 00:37:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJSb2xlIjoiQWRtaW4iLCJuYmYiOjE2Njc1MjIyNjd9.Hu6ZwnR4ROJQtWRUrAzZWGE1voIoT6moRZDgDL4xtuw\",\n    \"status\": \"Done\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2Njc1Mjc4NzMsInJvbGUiOiJBZG1pbiJ9.oBhSDCHow_Zmx-thNHEoLb4n6KY0qknowOeZLXidlpg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5050/mvp/user/6360686d78bd3ef7457a0398",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"user",
+						"6360686d78bd3ef7457a0398"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2Njc1Mjc4NzMsInJvbGUiOiJBZG1pbiJ9.oBhSDCHow_Zmx-thNHEoLb4n6KY0qknowOeZLXidlpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5050/mvp/user/6360686d78bd3ef7457a0398",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"user",
+								"6360686d78bd3ef7457a0398"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 02:52:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "181"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userid\": \"6360686d78bd3ef7457a0398\",\n    \"name\": \"Alejandro ALdana\",\n    \"email\": \"example@email.com\",\n    \"password\": \"$2a$10$37x193xr4jBe1YEvmifEjuK9HKrzSr5LYOLqFRZwznaIT3SoBybY6\",\n    \"role\": \"Admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\":\"Alejandro\",\n    \"ownerid\":\"6360686d78bd3ef7457a0398\",\n\t\"status\":\"creado\",\n\t\"addred\": {\n        \"streetnumber\":115,\n\t    \"street\":\"Azahares\",\n\t    \"state\":\"Gto\",\n\t    \"city\":\"Leon\",\n\t    \"country\":\"MX\",\n\t    \"postalcode\":\"27207\"\n    },\n\t\"addressdelivery\": {\n        \"streetnumber\":116,\n\t    \"street\":\"Azahares\",\n\t    \"state\":\"Gto\",\n\t    \"city\":\"Leon\",\n\t    \"country\":\"MX\",\n\t    \"postalcode\":\"27207\"\n    },\n\t\"package\": [\n         {\n            \"weight\":20.2,\n\t        \"size\":\"30m3\",\n\t        \"service\": \"estandar\"\n        }\n    ],\n\t\"coordinates\": {\n        \"lat\": 85.20,\n\t    \"lng\": 110.10\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/mvp/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Order Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner\":\"Alejandro\",\n\t\"status\":\"creado\",\n\t\"addred\": {\n        \"streetnumber\":115,\n\t    \"street\":\"Azahares\",\n\t    \"state\":\"Gto\",\n\t    \"city\":\"Leon\",\n\t    \"country\":\"MX\",\n\t    \"postalcode\":\"27207\"\n    },\n\t\"addressdelivery\": {\n        \"streetnumber\":116,\n\t    \"street\":\"Azahares\",\n\t    \"state\":\"Gto\",\n\t    \"city\":\"Leon\",\n\t    \"country\":\"MX\",\n\t    \"postalcode\":\"27207\"\n    },\n\t\"package\": [\n         {\n            \"weight\":20.2,\n\t        \"size\":\"30m3\",\n\t        \"service\": \"estandar\"\n        }\n    ],\n\t\"coordinates\": {\n        \"lat\": 85.20,\n\t    \"lng\": 110.10\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/mvp/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 03:06:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						}
+					],
+					"cookie": [],
+					"body": "\"Success\""
+				}
+			]
+		},
+		{
+			"name": "Get Order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2Njc1MzY5OTksInJvbGUiOiJDbGllbnRlIiwidXNlcmlkIjoiNjM2MDZlOTA1N2FmNWEwODg5NzJmM2FjIn0.FnTh2JfGNcqCMR8DS-EyWYf4wYHGgW1TMzsrmKWJm4E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5050/mvp/order/63608d51abb1e5c2fad5b319",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"order",
+						"63608d51abb1e5c2fad5b319"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Order Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/mvp/order/6360a130251fd8376e2d853d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"order",
+								"6360a130251fd8376e2d853d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 04:32:54 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "558"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"orderid\": \"6360a130251fd8376e2d853d\",\n    \"owner\": \"Alejandro\",\n    \"ownerid\": \"6360686d78bd3ef7457a0398\",\n    \"timeregister\": \"2022-11-01T04:31:44.128Z\",\n    \"status\": \"creado\",\n    \"addred\": {\n        \"streetnumber\": 115,\n        \"street\": \"Azahares\",\n        \"state\": \"Gto\",\n        \"city\": \"Leon\",\n        \"country\": \"MX\",\n        \"postalcode\": \"27207\"\n    },\n    \"addressdelivery\": {\n        \"streetnumber\": 116,\n        \"street\": \"Azahares\",\n        \"state\": \"Gto\",\n        \"city\": \"Leon\",\n        \"country\": \"MX\",\n        \"postalcode\": \"27207\"\n    },\n    \"package\": [\n        {\n            \"weight\": 30.2,\n            \"size\": \"especial\",\n            \"service\": \"especial\"\n        }\n    ],\n    \"coordinates\": {\n        \"lat\": 85.2,\n        \"lng\": 110.1\n    },\n    \"description\": \"Special Package: Special deal is required.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Status",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2Njc1MzM5MzUsInJvbGUiOiJBZG1pbiIsInVzZXJpZCI6IjYzNjA2ODZkNzhiZDNlZjc0NTdhMDM5OCJ9.BVqAoKnW7l5iKNprB0yZCCILXWyI0k-_cBEQR9rM2wY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5050/mvp/order?orderid=63609cf662cff2bf0036a9da&status=cancelada",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"mvp",
+						"order"
+					],
+					"query": [
+						{
+							"key": "orderid",
+							"value": "63609cf662cff2bf0036a9da"
+						},
+						{
+							"key": "status",
+							"value": "cancelada"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Status Success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2Njc1MzM5MzUsInJvbGUiOiJBZG1pbiIsInVzZXJpZCI6IjYzNjA2ODZkNzhiZDNlZjc0NTdhMDM5OCJ9.BVqAoKnW7l5iKNprB0yZCCILXWyI0k-_cBEQR9rM2wY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5050/mvp/order?orderid=63609cf662cff2bf0036a9da&status=cancelada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"mvp",
+								"order"
+							],
+							"query": [
+								{
+									"key": "orderid",
+									"value": "63609cf662cff2bf0036a9da"
+								},
+								{
+									"key": "status",
+									"value": "cancelada"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 04:14:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						}
+					],
+					"cookie": [],
+					"body": "\"Success\""
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 03:27:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "252"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"pass\",\n    \"description\": \"API Pod HealthCheck\",\n    \"version\": \"1.0\",\n    \"details\": [\n        {\n            \"componentName\": \"instance\",\n            \"componentType\": \"pod\",\n            \"componentId\": \"\",\n            \"metricValue\": 0.000239,\n            \"metricUnit\": \"ms\",\n            \"time\": \"2022-10-31T21:27:11.619410464-06:00\",\n            \"status\": \"pass\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Health Dependencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/health/dependencies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"health",
+						"dependencies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health Dependencies Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/health/dependencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"health",
+								"dependencies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 03:27:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"pass\",\n    \"description\": \"API health status\",\n    \"version\": \"1.0\",\n    \"details\": [\n        {\n            \"componentName\": \"MongoDB Connection\",\n            \"componentType\": \"datastore\",\n            \"componentId\": \"MONGODB-RSAUTH-CONN\",\n            \"metricValue\": 0.858042,\n            \"metricUnit\": \"ms\",\n            \"time\": \"2022-10-31T21:27:48.792401481-06:00\",\n            \"status\": \"pass\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
