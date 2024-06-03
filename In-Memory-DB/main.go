@@ -5,51 +5,53 @@ import (
 )
 
 type Item struct {
-	Field string
-	Value string
+	Field     string
+	Value     string
+	Timestamp int
+	Ttl       int
 }
 
-type InMemoryImpl struct {
-	mu        sync.Mutex
-	ItemsList map[string][]Item
+type InMemoryDBImpl struct {
+	mu       sync.Mutex
+	ItemList map[string][]Item
 }
 
-func NewInMemoryDB() *InMemoryImpl {
-	return &InMemoryImpl{
-		ItemsList: make(map[string][]Item),
+func NewInMemoryDB() *InMemoryDBImpl {
+	return &InMemoryDBImpl{
+		ItemList: make(map[string][]Item),
 	}
 }
 
-func (db *InMemoryImpl) Set(key, field, value string) {
+func (db *InMemoryDBImpl) Set(key, field, value string) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
-	if items, exists := db.ItemsList[key]; exists {
-		db.ItemsList[key] = append(items, Item{Field: field, Value: value})
+	if items, exists := db.ItemList[key]; exists {
+		db.ItemList[key] = append(items, Item{Field: field, Value: value})
 	} else {
-		db.ItemsList[key] = []Item{{Field: field, Value: value}}
+		db.ItemList[key] = []Item{{Field: field, Value: value}}
 	}
 }
 
-func (db *InMemoryImpl) Get(key, field string) *string {
+func (db *InMemoryDBImpl) Get(key, field string) *string {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
-	if items, exists := db.ItemsList[key]; exists {
+	if items, exists := db.ItemList[key]; exists {
 		return getValueByField(field, items)
 	}
 
 	return nil
 }
 
-func (db *InMemoryImpl) Delete(key, field string) {
+func (db *InMemoryDBImpl) Delete(key, field string) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
-	if items, exists := db.ItemsList[key]; exists {
+	if items, exists := db.ItemList[key]; exists {
 		for i, item := range items {
 			if item.Field == field {
-				db.ItemsList[key] = append(items[:i], items[i+1:]...)
+				db.ItemList[key] = append(items[:i], items[i+1:]...)
 				break
 			}
 		}
@@ -64,6 +66,14 @@ func getValueByField(field string, items []Item) *string {
 	}
 
 	return nil
+}
+
+func checkStringValue(str *string) string {
+	if str != nil {
+		return *str
+	}
+
+	return "None"
 }
 
 func main() {
@@ -85,12 +95,4 @@ func main() {
 
 	value = db.Get("A", "D")
 	println(checkStringValue(value))
-}
-
-func checkStringValue(str *string) string {
-	if str != nil {
-		return *str
-	}
-
-	return "None"
 }
