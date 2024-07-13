@@ -17,16 +17,18 @@ type AddressInfo struct {
 }
 
 func main() {
-	// println("Hello world")
 
+	/*
+		Variable examples
+	*/
 	// var intExample int = 1
 	// var doubleExample float32 = 1.0
 	// var boolExample bool = true
 	// var stringExample string = "Hola"
 
-	// name := true
+	// name := true <-- Low type declaration
 
-	linstOfNumbers := []int{} // make([]int,2) // [1,2]
+	linstOfNumbers := []int{} // make([]int,2) // [1,2] <-- Tuple
 	listUser := []User{}
 
 	name := ""
@@ -40,10 +42,10 @@ func main() {
 	userInfo.Name = &name
 	listUser = append(listUser, userInfo)
 
-	// fmt.Println(userInfo)
-	// println(fmt.Sprintf("Name: %v, Address: %s", userInfo.Name, userInfo.Address.Street))
+	fmt.Println(userInfo)
+	println(fmt.Sprintf("Name: %v, Address: %s", userInfo.Name, userInfo.Address.Street))
 
-	// println(fmt.Sprintf("Is active: %v", isActiveValidator(userInfo.IsActive)))
+	println(fmt.Sprintf("Is active: %v", isActiveValidator(userInfo.IsActive)))
 
 	maxNumber, err := validMaxNumber(linstOfNumbers)
 	if err != nil {
@@ -54,10 +56,12 @@ func main() {
 	println(maxNumber)
 }
 
+// Example of function validator
 func isActiveValidator(isActive bool) bool {
 	return isActive
 }
 
+// Example of function with 2 returns
 func validMaxNumber(arrayInts []int) (int, error) {
 	if len(arrayInts) <= 0 {
 		return 0, errors.New("Invalid number")
